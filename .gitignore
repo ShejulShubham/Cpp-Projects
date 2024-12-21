@@ -1,3 +1,10 @@
-/game-in-cpp-full-course
-/*.vscode
-/*.exe
+# ignore ALL files in ANY directory named game-in-cpp-full-course/
+game-in-cpp-full-course/
+
+# ignore ALL files in ANY directory named temp
+temp/
+
+
+# ignore ALL .vscode and .exe files
+*.vscode
+*.exe
