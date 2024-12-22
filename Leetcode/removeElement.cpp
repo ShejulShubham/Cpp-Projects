@@ -46,6 +46,7 @@ int main(){
     cout << "After remove list: ";
     solve.print_container(*nums);
 
+    delete nums;
 
     return 0;
 };
