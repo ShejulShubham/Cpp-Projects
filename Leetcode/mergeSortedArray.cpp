@@ -68,7 +68,7 @@ int main(){
     nums2->push_back(5);
     nums2->push_back(6);
     
-    Solution* solve = new Solution();
+    Solution* solve = new Solution(); // Head memory
     
     solve->merge(*nums1, 3, *nums2, 3);
 
