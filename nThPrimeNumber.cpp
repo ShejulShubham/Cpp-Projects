@@ -1,12 +1,24 @@
 #include <bits/stdc++.h>
-
+#include "./headers/vector.hpp"
 using namespace std;
+using namespace myVector;
 
 class Solution
 {
 public: 
     int findNThPrimeNumber(int n){
         vector<int>* primeNumbers = new vector<int>({2, 3, 5, 7});
+
+        getPrimeNumber1(n, *primeNumbers);
+
+        print_container("Prime Numbers: ", *primeNumbers);
+
+        return primeNumbers->at(n-1);
+    }
+
+
+    void getPrimeNumber1(int n, vector<int>& list){
+
         int counter = 0;
         int i = 11;
 
@@ -21,33 +33,37 @@ public:
             }
 
             if(cnt == 2){
-                primeNumbers->push_back(i);
+                list.push_back(i);
                 counter++;
             }
 
             i++;
         }
-
-        printContainer("Prime Numbers: ", *primeNumbers);
-
-        return primeNumbers->at(n-1);
+            
     }
 
-    void printContainer(string message, vector<int>& list){
-        cout << message;
+    // FOLLOWING METHOD DOES NOT WORK
+    // void getPrimeNumber2(int n, vector<int>& list){
+    //     int counter = 0;
+    //     int i = 11;
 
-        for(auto n : list){
-            cout << n << " ";
-        }
+    //     for(int i = 11; counter < n; i++){
+    //         if(i%2 == 0 || i%3 == 0 || i%5 == 0 || i%7 == 0 || i%9 == 0 || i%11 == 0)
+    //             continue;
+    //         else{
+    //             list.push_back(i);
+    //             counter++;
+    //         }
+    //     }
+        
+    // }
 
-        cout << "\n";
-    }
 };
 
 int main(){
-    int n = 0;
-    cout << "Enter Prime Number position: ";
-    cin >> n;
+    int n = 100;
+    // cout << "Enter Prime Number position: ";
+    // cin >> n;
     
     Solution solve;
     int prime = solve.findNThPrimeNumber(n);
