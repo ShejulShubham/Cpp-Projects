@@ -8,3 +8,6 @@ temp/
 # ignore ALL .vscode and .exe files
 *.vscode
 *.exe
+
+# ignore files
+test.cpp
