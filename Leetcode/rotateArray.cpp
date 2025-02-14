@@ -1,5 +1,8 @@
 # include <bits/stdc++.h>
+#include "../headers/vector.hpp"
+
 using namespace std;
+using namespace myVector;
 
 class Solution {
 public:
@@ -8,8 +11,8 @@ public:
         k = k % n;// Reduce k to prevent unnecessary rotations
 
 
-        solution1(nums, k);
-        // solution2(nums, k);
+        // solution1(nums, k);
+        solution2(nums, k);
 
     }
 
@@ -18,15 +21,15 @@ public:
         k = k % n; // Reduce k to prevent unnecessary rotations
         
         // Reverse the entire array
-        Solution::reverse(nums, 0, nums.size());
+        reverse(nums, 0, nums.size());
         //output: {5, 4, 3, 2, 1}
         
         // Reverse the first k elements
-        Solution::reverse(nums, 0, k);
+        reverse(nums, 0, k);
         //output: {4, 5, 3, 2, 1}
         
         // Reverse the remaining n-k elements
-        Solution::reverse(nums, k, nums.size());
+        reverse(nums, k, nums.size());
         //output: {4, 5, 1, 2, 3}
     }
 
@@ -39,29 +42,7 @@ public:
             nums.pop_back();
         }
     }
-
-private:
-    void reverse(vector<int>& container, int start, int end){
-
-        while(start < end){
-            int temp = container[start];
-            container[start] = container[end];
-            container[end] = temp;
-
-            start++;
-            end--;
-        }
-    }
 };
-
-void print_container(vector<int>& container){
-
-    for(auto element : container){
-        cout << element <<" ";
-    }
-
-    cout << endl;
-}
 
 int main(){
 
