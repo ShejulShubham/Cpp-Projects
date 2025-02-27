@@ -5,33 +5,44 @@
 
 using namespace std;
 
-namespace myVector {
+namespace myVector
+{
 
     template <typename T>
-    void print_container(vector<T>& list){
-        cout << "[ ";
-        for(auto& val : list){
-            cout << val << ", ";
-        }
+    void print_container(vector<T> &list)
+    {
+        cout << "[";
+        for (int i = 0; i < list.size(); i++)
+        {
+            if (i != 0)
+                cout << ", ";
 
+            cout << list[i];
+        }
         cout << "]\n";
     }
 
     template <typename T>
-    void print_container(string message, vector<T>& list){
+    void print_container(string message, vector<T> &list)
+    {
         cout << message;
-        cout << "[ ";
+        cout << "[";
 
-        for(auto& val : list){
-            cout << val << ", ";
+        for (int i = 0; i < list.size(); i++)
+        {
+            if (i != 0)
+                cout << ", ";
+            cout << list[i];
         }
 
         cout << "]\n";
     }
 
-    inline void reverse(vector<int>& container, int start, int end){
+    inline void reverse(vector<int> &container, int start, int end)
+    {
 
-        while(start < end){
+        while (start < end)
+        {
             int temp = container[start];
             container[start] = container[end];
             container[end] = temp;
@@ -42,6 +53,5 @@ namespace myVector {
     }
 
 }
-
 
 #endif
