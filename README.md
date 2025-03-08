@@ -4,10 +4,10 @@
     ```BASH
     g++ fileName.cpp
     ```
+
 1.1 If you want custom filename
     ```BASH
-        # For both OS
-        g++ filename.cpp -o output_filename
+    g++ filename.cpp -o output_filename
     ```
 
  2. To execute the code
