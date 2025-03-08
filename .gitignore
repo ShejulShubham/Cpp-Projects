@@ -11,3 +11,4 @@ temp/
 
 # ignore files
 test.cpp
+temporary.txt
