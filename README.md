@@ -5,12 +5,12 @@
     g++ fileName.cpp
     ```
 
-1.1 If you want custom filename
-    ```BASH
-    g++ filename.cpp -o output_filename
-    ```
+2. If you want custom filename
+     ```BASH
+     g++ filename.cpp -o output_filename
+     ```
 
- 2. To execute the code
+3. To execute the code
     ```BASH
     # For Linux
         ./a.out
@@ -20,7 +20,7 @@
     # For Windows
         ./a.exe
     ```
-3. For custom filename
+4. For custom filename
     ```BASH
     # For Linux
         ./output_filename.out
